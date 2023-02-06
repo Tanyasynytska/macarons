@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macarons</title>
+    <style>
+body {
+    background: rgb(247, 234, 236);
+    padding: 10px;
+    width: 45%;
+    margin: auto;
+}
+section {
+    margin: 90px 0;
+}
+h1 {
+    color: rgb(230, 93, 116);
+    text-align: center;
+    font-size: 50px;
+}
+h2 {
+    color: rgb(160, 51, 67);
+    text-align: center;
+    font-size: 25px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 80%;
+}
+hr {
+   margin-top: 1.5em;
+   border-style: dashed;
+   color: rgb(160, 51, 67);
+}
+p {
+    color: rgb(104, 35, 45);
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    padding: 10px;
+}
+a {
+    color: rgb(230, 93, 116);
+}
+
+a:hover {
+    color: rgb(156, 143, 143);
+    background: rgb(240, 200, 207);
+}
+p2 {
+    color: rgb(104, 35, 45);
+    padding-top: 20px;
+}
+div {
+    color: rgb(104, 35, 45);
+    text-align: center;
+    padding-top: 20px;
+    font-size: small;
+}
+span {
+    padding: 15px;
+}
+    button {
+    padding: 5px 15px;
+    margin: 0 auto;
+    display: block;
+    font-size: 18px;
+    color:rgb(104, 35, 45);
+    background: transparent;
+    border: 1px solid rgb(104, 35, 45);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in-out;
+}
+button:hover {
+    background: rgb(240, 200, 207);
+    color: rgb(156, 143, 143);
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <section>
+    <h1>
+        M A C A R O N S 
+    </h1>
+    <h2>
+        Franch dessert 
+    </h2>
+    <img src = https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2013/08/macarons.jpg?w=800&ssl=1 />
+    <hr>
+    <p>
+        Macarons or macaroons are timeless little desert biscuits… Fads may come and fads may go, but macarons, the little
+        aristocrats of the patisserie world, will always be in fashion.
+    </p>
+    <a class="history" href = "https://thegoodlifefrance.com/macarons-the-history-and-endurability-of-macarons/" target="_blank">
+        History of macarons
+    </a>
+    <hr>
+        <button>
+            👉Order here
+        </button>
+    <p2>
+        <strong>   
+        Contacts:
+        </strong>
+            <br>
+        <span class="instagram">I:</span> 
+        <a href="https://www.instagram.com/macaron_lisboa/" target="_blank" class="contact-link">@macaron_lisboa</a>
+        <br>
+        <span class="contact-type">E:</span>
+        <a href="mailto:synytska3d@gmail.com" class="contact-link" target="_blank">synytska3d@gmail.com</a>
+    </p2>
+    <div>
+        Order is accepted from 10 pieces
+        </div>
+    </div>
+    </section>
+
+    <script>
+    function order() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let pieces = prompt("How many pieces do you want?");
+        let h2 = document.querySelector("h2");
+
+        if (pieces >= 10) {
+            h2.innerHTML = "😊 Thank you " + name + ", your order has been accepted for " + pieces + " macarons!";
+        } else {
+            h2.innerHTML = "☹ Sorry " + name + ", you have insufficient order!";
+        }
+    }
+    let contactButton = document.querySelector("button");
+    contactButton.addEventListener("click", order);
+    </script>  
+</body>
+</html>
